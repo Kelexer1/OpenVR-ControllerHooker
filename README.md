@@ -6,7 +6,7 @@ OpenVR ControllerHooker is a custom OpenVR driver for SteamVR that intercepts co
 	- Either download the code as a .zip, or run the following command:
 	- `git clone https://github.com/kelexer1/ControllerHooker.git`
 2. Build the project
-	- This requires Microsoft Visual Studio 2022 for a fresh build, although you can find prebuild files already included
+	- This requires Microsoft Visual Studio 2022 for a fresh build, although you can find prebuilt files already included
 3. Register the ControllerHooker driver, there are 2 ways to do this
 	1. Register the build directory
 		1. In a command terminal, navigate to your SteamVR bin directory, usually by
@@ -53,6 +53,10 @@ Driver logs are written to `C:/temp/log_ControllerHooker`, logging by client app
 		- `{configuration}` can be either `Debug` or `Release`, depending on your use
 - Link against `ControllerHookerLib.lib` and include the header files listed above
 - Consult the sample applications (particularly `MyFirstApplication`) to see how to initialize the application
+
+## ❓Frequency Asked Questions
+**Why are my controllers acting super jittery when using ping-pong communication?**
+	Make sure that the applications responding is running, and it is responding with no delay. If the application closes or isn't responding to requests, the driver will constantly wait and timeout, causing the controllers to appear extremely jittery
 
 ## 🧪 Sample Applications
 - `MyFirstApplication`: Demonstrates initialization and basic pose modification

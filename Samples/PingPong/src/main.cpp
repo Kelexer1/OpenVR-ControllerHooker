@@ -63,5 +63,8 @@ int main() {
 		// Check out those files to see how to respond to pose requests
 	}
 
+	// Keep the program from exiting (if it exits we can't respond to pose requests)
+	while (true) {}
+
 	return 0;
 }

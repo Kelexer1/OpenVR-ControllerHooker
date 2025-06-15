@@ -2,8 +2,8 @@
   ControllerCommandSender.cpp
   SharedControllerMemory.cpp
   Generating Code...
-C:\Users\tjm11\source\repos\ControllerHooker\SharedFiles\src\ControllerCommandSender.cpp(122,1): warning C4172: returning address of local variable or temporary : naturalPose
 C:\Users\tjm11\source\repos\ControllerHooker\SharedFiles\src\ControllerCommandSender.cpp(110,1): warning C4172: returning address of local variable or temporary : overridePose
-C:\Users\tjm11\source\repos\ControllerHooker\SharedFiles\src\ControllerCommandSender.cpp(140,1): warning C4172: returning address of local variable or temporary : shouldOverridePose
 C:\Users\tjm11\source\repos\ControllerHooker\SharedFiles\src\ControllerCommandSender.cpp(158,1): warning C4172: returning address of local variable or temporary : usePingPong
+C:\Users\tjm11\source\repos\ControllerHooker\SharedFiles\src\ControllerCommandSender.cpp(140,1): warning C4172: returning address of local variable or temporary : shouldOverridePose
+C:\Users\tjm11\source\repos\ControllerHooker\SharedFiles\src\ControllerCommandSender.cpp(122,1): warning C4172: returning address of local variable or temporary : naturalPose
   ControllerHookerLib.vcxproj -> C:\Users\tjm11\source\repos\ControllerHooker\Build\ControllerHookerLib\Debug\ControllerHookerLib.lib

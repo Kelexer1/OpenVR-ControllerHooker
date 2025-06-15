@@ -50,7 +50,7 @@ bool SharedControllerMemoryIO::initialize(bool isDriver) {
 		return false;
 	}
 
-	if (isDriver) {
+	if (!isDriver) {
 		if (eventListener) {
 			pollThread = std::thread([this]() {
 				while (!pollExitRequested.load()) {
