@@ -32,22 +32,10 @@
     <ClInclude Include="..\SharedFiles\headers\IControllerEventListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\SharedFiles\headers\MinHook.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\SharedFiles\headers\openvr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\SharedFiles\headers\openvr_capi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SharedFiles\headers\openvr_driver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\SharedFiles\headers\SharedControllerMemory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SharedFiles\headers\vrmath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\SharedFiles\headers\ControllerCommandSender.h">

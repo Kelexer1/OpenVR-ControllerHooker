@@ -5,12 +5,15 @@
 
 /// struct HmdVector3_t
 struct ControllerVector3 {
-	float v[3];
+	double v[3] = { 0.0, 0.0, 0.0 };
 };
 
 /// struct HmdQuaternion_t
 struct ControllerQuaternion {
-	double w, x, y, z;
+	double w = 1.0;
+	double x = 0.0;
+	double y = 0.0;
+	double z = 0.0;
 };
 
 /// enum ETrackingResult
@@ -28,31 +31,31 @@ enum ControllerTrackingResult {
 
 /// struct DriverPose_t
 struct ControllerPose {
-	double poseTimeOffset;
+	double poseTimeOffset = 0.0;
 
 	ControllerQuaternion qWorldFromDriverRotation;
-	double vecWorldFromDriverTranslation[3];
+	double vecWorldFromDriverTranslation[3] = { 0.0, 0.0, 0.0 };
 
 	ControllerQuaternion qDriverFromHeadRotation;
-	double vecDriverFromHeadTranslation[3];
+	double vecDriverFromHeadTranslation[3] = { 0.0, 0.0, 0.0 };
 
-	double vecPosition[3];
+	double vecPosition[3] = { 0.0, 0.0, 0.0 };
 
-	double vecVelocity[3];
+	double vecVelocity[3] = { 0.0, 0.0, 0.0 };
 
-	double vecAcceleration[3];
+	double vecAcceleration[3] = { 0.0, 0.0, 0.0 };
 
 	ControllerQuaternion qRotation;
 
-	double vecAngularVelocity[3];
+	double vecAngularVelocity[3] = { 0.0, 0.0, 0.0 };
 
-	double vecAngularAcceleration[3];
+	double vecAngularAcceleration[3] = { 0.0, 0.0, 0.0 };
 
-	ControllerTrackingResult result;
+	ControllerTrackingResult result = TrackingResult_Uninitialized;
 
-	bool poseIsValid;
-	bool willDriftInYaw;
-	bool shouldApplyHeadModel;
-	bool deviceIsConnected;
+	bool poseIsValid = false;
+	bool willDriftInYaw = false;
+	bool shouldApplyHeadModel = false;
+	bool deviceIsConnected = false;
 };
 

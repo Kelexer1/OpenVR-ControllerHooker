@@ -8,12 +8,6 @@
 #include "DeviceProvider.h"
 #include "HookManager.h"
 
-#if _WIN64
-#pragma comment(lib, "libMinHook.x64.lib")
-#else
-#pragma comment(lib, "libMinHook.x86.lib")
-#endif
-
 DeviceProvider deviceProvider;
 
 extern "C" __declspec(dllexport) void* HmdDriverFactory(const char* pInterfaceName, int* pReturnCode) {

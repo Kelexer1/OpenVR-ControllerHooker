@@ -71,10 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)\bin\win$(PlatformArchitecture)\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)</OutDir>
+    <TargetName>$(ProjectName)$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)</OutDir>
+    <TargetName>$(ProjectName)$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -125,7 +127,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>%(AdditionalDependencies);openvr_api.lib;libMinHook.x64.lib</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);openvr_api.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)SharedFiles\lib</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
@@ -162,12 +164,8 @@
     <ClInclude Include="..\SharedFiles\headers\ControllerTypes.h" />
     <ClInclude Include="..\SharedFiles\headers\IControllerCommandSender.h" />
     <ClInclude Include="..\SharedFiles\headers\IControllerEventListener.h" />
-    <ClInclude Include="..\SharedFiles\headers\MinHook.h" />
     <ClInclude Include="..\SharedFiles\headers\openvr.h" />
-    <ClInclude Include="..\SharedFiles\headers\openvr_capi.h" />
-    <ClInclude Include="..\SharedFiles\headers\openvr_driver.h" />
     <ClInclude Include="..\SharedFiles\headers\SharedControllerMemory.h" />
-    <ClInclude Include="..\SharedFiles\headers\vrmath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
